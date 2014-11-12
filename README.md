@@ -1,4 +1,4 @@
-Spring Hibernate Book
+Spring Hibernate TDD REST Book
 ======================================
 The repository is the sample code of a Spring and Hibernate book. The author and his team has put lot of effort in putting together this vast useful code. If you find the information useful, do buy the book. 
 
