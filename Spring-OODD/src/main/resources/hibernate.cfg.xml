@@ -1,0 +1,41 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<property name="show_sql">true</property>
+        <mapping class="com.oodd.spring.standalone.entity.Product" />
+        <mapping class="com.oodd.spring.onetooneunidirectional.entity.Book" />
+		<mapping class="com.oodd.spring.onetooneunidirectional.entity.Shipping" />
+		<mapping class="com.oodd.spring.onetoonebidirectional.entity.Customer" />
+		<mapping class="com.oodd.spring.onetoonebidirectional.entity.Cart" />
+		<mapping class="com.oodd.spring.onetooneselfreference.entity.Student" />
+		<mapping class="com.oodd.spring.onetomanyunidirectional.entity.Person" />
+		<mapping class="com.oodd.spring.onetomanyunidirectional.entity.Phone" />		
+		<mapping class="com.oodd.spring.manytomanyunidirectional.entity.User" />
+		<mapping class="com.oodd.spring.manytomanyunidirectional.entity.Group" />
+		<mapping class="com.oodd.spring.onetomanybidirectional.entity.Item"/>
+		<mapping class="com.oodd.spring.onetomanybidirectional.entity.Feature"/>
+		<mapping class="com.oodd.spring.manytomanybidirectional.entity.Client" />
+		<mapping class="com.oodd.spring.manytomanybidirectional.entity.Account" />
+		<mapping class="com.oodd.spring.onetomanyselfreference.entity.Category" />		
+		<mapping class="com.oodd.spring.manytomanybidirectionalwithjoinattribute.entity.Manuscript" />
+		<mapping class="com.oodd.spring.manytomanybidirectionalwithjoinattribute.entity.Author" />
+		<mapping class="com.oodd.spring.manytomanybidirectionalwithjoinattribute.entity.ManuscriptAuthor" />
+		<mapping class="com.oodd.spring.manytomanybidirectionalwithjoinattribute.entity.ManuscriptAuthorId" />
+		<mapping class="com.oodd.spring.manytomanyselfreference.entity.Member" />
+		<mapping class="com.oodd.spring.manytomanyselfreferencewithjoinattribute.entity.Worker" />
+		<mapping class="com.oodd.spring.manytomanyselfreferencewithjoinattribute.entity.WorkerWorker" />
+		<mapping class="com.oodd.spring.manytomanyselfreferencewithjoinattribute.entity.WorkerWorkerId" />		
+		<mapping class="com.oodd.spring.singletableinheritance.entity.Protocol" />	
+		<mapping class="com.oodd.spring.singletableinheritance.entity.TCP" />
+		<mapping class="com.oodd.spring.singletableinheritance.entity.SNMP" />		
+		<mapping class="com.oodd.spring.concretetableinheritance.entity.Estate" />
+		<mapping class="com.oodd.spring.concretetableinheritance.entity.Building" />
+		<mapping class="com.oodd.spring.concretetableinheritance.entity.Land" />		
+		<mapping class="com.oodd.spring.classtableinheritance.entity.Employee" />
+		<mapping class="com.oodd.spring.classtableinheritance.entity.PermanentEmployee" />
+		<mapping class="com.oodd.spring.classtableinheritance.entity.ContractorEmployee" />
+    </session-factory>
+</hibernate-configuration>

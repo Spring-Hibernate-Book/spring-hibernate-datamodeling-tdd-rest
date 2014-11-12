@@ -1,0 +1,54 @@
+package com.oodd.spring.manytomanybidirectional.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import com.oodd.spring.manytomanybidirectional.dto.ClientDto;
+import com.oodd.spring.manytomanybidirectional.service.ClientService;
+
+@Controller
+@RequestMapping(value="/manytomanybidirectional/client")
+@Transactional
+public class ClientController {
+
+	@Autowired
+	private ClientService service;
+	
+	@RequestMapping(value="/findAll", method=RequestMethod.GET)
+	public @ResponseBody List<ClientDto> findAll(){
+		return service.findAll();
+	}
+	
+	@RequestMapping(value="/findById/{clientid}", method=RequestMethod.GET)
+	public @ResponseBody ClientDto findById(@PathVariable("clientid") Integer clientid){
+		return service.findById(clientid);
+	}
+	
+	@RequestMapping(value="/create", method=RequestMethod.POST)
+	@ResponseBody
+	public void create(@RequestBody ClientDto clientDto){
+		service.create(clientDto);
+	}
+	
+	@RequestMapping(value="/remove/{clientid}", method=RequestMethod.POST)
+	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+	public void remove(@PathVariable("clientid") Integer clientid){
+		service.remove(clientid);
+	}
+	
+	@RequestMapping(value="/edit", method=RequestMethod.POST)
+	@ResponseBody
+	public void edit(@RequestBody ClientDto clientDto){
+		service.edit(clientDto);
+	}
+}
