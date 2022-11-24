@@ -174,6 +174,6 @@
 	<properties>
 		<org.springframework.version>4.0.0.RELEASE</org.springframework.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<hibernate.version>4.2.7.Final</hibernate.version>
+		<hibernate.version>5.3.20.Final</hibernate.version>
 	</properties>
 </project>
